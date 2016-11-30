@@ -95,19 +95,19 @@ class Select2Mixin(object):
         output += super(Select2Mixin, self).render_options(*args, **kwargs)
         return output
 
-    def _get_media(self):
-        """
-        Construct Media as a dynamic property.
-
-        .. Note:: For more information visit
-            https://docs.djangoproject.com/en/1.8/topics/forms/media/#media-as-a-dynamic-property
-        """
-        return forms.Media(
-            js=(settings.SELECT2_JS, 'django_select2/django_select2.js'),
-            css={'screen': (settings.SELECT2_CSS,)}
-        )
-
-    media = property(_get_media)
+    # def _get_media(self):
+    #     """
+    #     Construct Media as a dynamic property.
+    #
+    #     .. Note:: For more information visit
+    #         https://docs.djangoproject.com/en/1.8/topics/forms/media/#media-as-a-dynamic-property
+    #     """
+    #     return forms.Media(
+    #         js=(settings.SELECT2_JS, 'django_select2/django_select2.js'),
+    #         css={'screen': (settings.SELECT2_CSS,)}
+    #     )
+    #
+    # media = property(_get_media)
 
 
 class Select2TagMixin(object):
